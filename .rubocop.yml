@@ -1,0 +1,48 @@
+Rails:
+  Enabled: true
+
+Rails/DynamicFindBy:
+  Enabled: false # remove after updating to Rails 4
+
+AllCops:
+  Exclude:
+    - '.bundle/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+  TargetRubyVersion: 2.1
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/TrivialAccessors:
+  AllowDSLWriters: true
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/RaiseArgs:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Lint/AmbiguousOperator:
+  Enabled: false
