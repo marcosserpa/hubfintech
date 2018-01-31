@@ -1,0 +1,29 @@
+<p id = "notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @owner.name %>
+</p>
+
+<p>
+  <strong>Company Name:</strong>
+  <%= @owner.company_name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @owner.birthday %>
+</p>
+
+<p>
+  <strong>Company?:</strong>
+  <%= @owner.company %>
+</p>
+
+<p>
+  <strong>CPF/CNPJ:</strong>
+  <%= @owner.owner_national_number %>
+</p>
+
+<%= link_to 'Edit', edit_owner_path(@owner) %> |
+<%= link_to 'Back', owners_path %>

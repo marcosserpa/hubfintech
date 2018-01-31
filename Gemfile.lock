@@ -59,6 +59,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    cpf_cnpj (0.4.1)
     crass (1.0.3)
     database_cleaner (1.6.2)
     debug_inspector (0.0.3)
@@ -217,6 +218,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap (~> 4.0.0.beta3)
   coffee-rails (~> 4.1.0)
+  cpf_cnpj
   database_cleaner
   factory_girl_rails
   jbuilder (~> 2.0)
