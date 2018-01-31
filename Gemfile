@@ -38,6 +38,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'rspec-rails'
+  gem 'rubocop'
 
   # Use sqlite3 as the database for Active Record
   # gem 'sqlite3'
