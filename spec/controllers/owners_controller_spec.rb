@@ -150,13 +150,6 @@ RSpec.describe OwnersController, type: :controller do
   end
 
   describe 'POST #create' do
-    # let(:url) { 'http://valid.url.com/some/path' }
-    # let(:advertiser_name) { 'Advertiser Test' }
-    # let(:starts_at) { Time.zone.now }
-    # let(:description) do
-    #   'blablabla blablabla description blabla blablabla description blabla blablabla description blabla'
-    # end
-
     let(:person_params) do
       {
         owner: {
@@ -221,30 +214,6 @@ RSpec.describe OwnersController, type: :controller do
   end
 
   describe 'PUT #update' do
-    # let(:url) { 'http://valid.url.com/some/path' }
-    # let(:advertiser_name) { 'Advertiser Test' }
-    # let(:starts_at) { Time.zone.now }
-    # let(:description) do
-    #   'blablabla blablabla description blabla blablabla description blabla blablabla description blabla'
-    # end
-    # let(:params) do
-    #   {
-    #     owner: {
-    #       advertiser_name: advertiser_name,
-    #       url: url,
-    #       starts_at: starts_at,
-    #       description: description
-    #     }
-    #   }
-    # end
-    # let(:invalid_params) do
-    #   {
-    #     advertiser_name: advertiser_name,
-    #     url: url,
-    #     description: description
-    #   }
-    # end
-    # subject(:action) { post :create, params }
     let(:person_params) do
       {
         owner: {
@@ -297,18 +266,6 @@ RSpec.describe OwnersController, type: :controller do
         expect(response).to redirect_to(owner)
       end
     end
-
-    # context 'with invalid params' do
-    #   let(:url) { 'invalid.url' }
-
-    #   it 'does not create a new owner' do
-    #     expect { action }.not_to change(Owner, :count)
-    #   end
-
-    #   it 're-renders the :new template' do
-    #     expect(action).to render_template :new
-    #   end
-    # end
   end
 
   describe 'DELETE #destroy' do

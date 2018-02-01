@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131101832) do
+ActiveRecord::Schema.define(version: 20180131212312) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.float    "balance",    limit: 24
+    t.string   "status",     limit: 255
+    t.boolean  "main"
+    t.integer  "parent_id",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "owner_id",   limit: 4
+  end
+
+  add_index "accounts", ["owner_id"], name: "index_accounts_on_owner_id", using: :btree
+  add_index "accounts", ["parent_id"], name: "index_accounts_on_parent_id", using: :btree
 
   create_table "owners", force: :cascade do |t|
     t.string   "name",                  limit: 255
@@ -23,4 +36,5 @@ ActiveRecord::Schema.define(version: 20180131101832) do
     t.datetime "updated_at",                        null: false
   end
 
+  add_foreign_key "accounts", "owners"
 end

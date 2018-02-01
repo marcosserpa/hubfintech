@@ -1,4 +1,6 @@
 class Owner < ActiveRecord::Base
+  has_many :accounts
+
   validates :owner_national_number, presence: true
   validates :name, presence: true
   validate :check_birthday
