@@ -2,7 +2,7 @@ class OwnersController < ApplicationController
   before_action :set_owner, only: %i[show edit update destroy]
 
   def index
-    @owners = Owner.all
+    @owners = Owner.all.page params[:page]
   end
 
   def show; end

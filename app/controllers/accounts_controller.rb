@@ -3,7 +3,7 @@ class AccountsController < ApplicationController
   before_action :load_options, only: %i[new edit]
 
   def index
-    @accounts = Account.all
+    @accounts = Account.all.page params[:page]
   end
 
   def show; end

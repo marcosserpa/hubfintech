@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'bootstrap', '~> 4.0.0.beta3'
+# gem 'bootstrap', '~> 4.0.0.beta3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -60,3 +60,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'test_after_commit'
 end
+
+gem 'kaminari'

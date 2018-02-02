@@ -1,19 +1,25 @@
-<p id = "notice"><%= notice %></p>
+<div class = 'container'>
+  <main class = 'col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content' role = 'main'>
+    <div class = 'alert alert-primary' role = 'alert'>
+      <p id = 'notice'><%= notice %></p>
+    </div>
 
-<p>
-  <strong>Id:</strong>
-  <%= @account.id %>
-</p>
+    <p>
+      <strong>Id:</strong>
+      <%= @account.id %>
+    </p>
 
-<p>
-  <strong>Main account:</strong>
-  <%= @account.parent %>
-</p>
+    <p>
+      <strong>Main account:</strong>
+      <%= @account.parent %>
+    </p>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @account.owner %>
-</p>
+    <p>
+      <strong>Owner:</strong>
+      <%= @account.owner %>
+    </p>
 
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+    <%= link_to 'Edit', edit_account_path(@account) %> |
+    <%= link_to 'Back', accounts_path %>
+  </main>
+</div>

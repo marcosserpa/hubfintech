@@ -1,38 +1,38 @@
 <%= form_for(@owner) do |f| %>
   <% if @owner.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@owner.errors.count, "error") %> prohibited this owner from being saved:</h2>
+    <div id = 'error_explanation' class = 'alert alert-danger' role = 'alert'>
+      <h2><%= pluralize(@owner.errors.count, 'error') %> prohibited this owner from being saved:</h2>
 
       <ul>
-      <% @owner.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @owner.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class = "field">
+  <div class = 'form-group'>
     <%= f.label :company %><br>
     <%= f.check_box :company %>
   </div>
-  <div class = "field">
+  <div class = 'form-group'>
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
-  <div class = "field">
+  <div class = 'form-group'>
     <%= f.label :company_name %><br>
-    <%= f.text_field :company_name %>
+    <%= f.text_field :company_name, class: 'form-control' %>
   </div>
-  <div class = "field">
+  <div class = 'form-group'>
     <%= f.label :birthday %><br>
-    <%= f.datetime_select :birthday, include_blank: true %>
+    <%= f.date_select :birthday, include_blank: true, class: 'form-control' %>
   </div>
-  <div class = "field">
+  <div class = 'form-group'>
     <%= f.label :owner_national_number %><br>
-    <%= f.datetime_select :owner_national_number %>
+    <%= f.text_field :owner_national_number, class: 'form-control' %>
   </div>
 
-  <div class = "actions">
+  <div class = 'actions'>
     <%= f.submit %>
   </div>
 <% end %>

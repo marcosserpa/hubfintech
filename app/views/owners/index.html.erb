@@ -1,37 +1,45 @@
-<p id = "notice"><%= notice %></p>
-
-<h1>Listing Owners</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>name</th>
-      <th>company name</th>
-      <th>birthday</th>
-      <th>company</th>
-      <th>national register</th>
-      <th colspan = "3">actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @owners.each do |owner| %>
-      <tr>
-        <td><%= owner.id %></td>
-        <td><%= owner.name %></td>
-        <td><%= owner.company_name %></td>
-        <td><%= owner.birthday %></td>
-        <td><%= owner.company %></td>
-        <td><%= owner.owner_national_number %></td>
-        <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
-        <td><%= link_to 'Enable/Disable', status_path(owner) %></td>
-        <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class = 'container'>
+  <main class = 'col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content' role = 'main'>
+    <% if notice %>
+      <div class = 'alert alert-primary' role = 'alert'>
+        <p id = 'notice'><%= notice %></p>
+      </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+    <h1>Listing Owners</h1>
 
-<%= link_to 'New owner', new_owner_path %>
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>company name</th>
+          <th>birthday</th>
+          <th>company</th>
+          <th>national register</th>
+          <th colspan = "3">actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @owners.each do |owner| %>
+          <tr>
+            <td><%= owner.id %></td>
+            <td><%= owner.name %></td>
+            <td><%= owner.company_name %></td>
+            <td><%= owner.birthday %></td>
+            <td><%= owner.company %></td>
+            <td><%= owner.owner_national_number %></td>
+            <td><%= link_to 'Edit', edit_owner_path(owner) %></td>
+            <td><%= link_to 'Destroy', owner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= paginate @owners %>
+    <%= link_to 'New owner', new_owner_path %>
+  </main>
+</div>

@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Hubfintech</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Marcos Serpa">
 
-<%= yield %>
+    <title>Hubfintech</title>
 
-</body>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+          <%= link_to 'Owners', owners_path, class: "navbar-brand" %>
+          <%= link_to 'Accounts', accounts_path, class: "navbar-brand" %>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <%= yield %>
+    </main>
+  </body>
 </html>
