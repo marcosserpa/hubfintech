@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = 'en'>
   <head>
-    <meta charset="utf-8">
-    <meta name="author" content="Marcos Serpa">
+    <meta charset = 'utf-8'>
+    <meta name = 'author' content = 'Marcos Serpa'>
 
     <title>Hubfintech</title>
 
@@ -13,15 +13,17 @@
 
   <body>
     <header>
-      <div class="navbar navbar-dark bg-dark">
-        <div class="container d-flex justify-content-between">
-          <%= link_to 'Owners', owners_path, class: "navbar-brand" %>
-          <%= link_to 'Accounts', accounts_path, class: "navbar-brand" %>
+      <div class = 'navbar navbar-dark bg-dark'>
+        <div class = 'container d-flex justify-content-between'>
+          <%= link_to 'Owners', owners_path, class: 'navbar-brand' %>
+          <%= link_to 'Accounts', accounts_path, class: 'navbar-brand' %>
+
+          <span class="navbar-toggler-icon"></span>
         </div>
       </div>
     </header>
 
-    <main role="main">
+    <main role = 'main'>
       <%= yield %>
     </main>
   </body>
