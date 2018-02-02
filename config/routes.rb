@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :owners
   resources :accounts
 
+  post '/create' => 'transactions#create', :as => :create_transaction
+  post '/refund' => 'transactions#refund', :as => :refund_transaction
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

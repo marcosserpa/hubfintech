@@ -58,4 +58,5 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-activemodel-mocks'
   gem 'shoulda-matchers'
+  gem 'test_after_commit'
 end

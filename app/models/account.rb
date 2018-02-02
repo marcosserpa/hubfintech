@@ -14,7 +14,7 @@ class Account < ActiveRecord::Base
   end
 
   def set_status
-    self.status = 'active'
+    self.status = 'active' if self.status.blank?
   end
 
   def main?
@@ -27,5 +27,9 @@ class Account < ActiveRecord::Base
 
   def parent
     Account.find(self.parent_id).try(:id)
+  end
+
+  def active?
+    self.status == 'active'
   end
 end

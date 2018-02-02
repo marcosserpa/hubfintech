@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180131212312) do
+ActiveRecord::Schema.define(version: 20180201102059) do
 
   create_table "accounts", force: :cascade do |t|
     t.float    "balance",    limit: 24
@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(version: 20180131212312) do
     t.date     "birthday"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string   "destination", limit: 255
+    t.string   "origin",      limit: 255
+    t.string   "code",        limit: 255
+    t.boolean  "reversal"
+    t.float    "value",       limit: 24
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   add_foreign_key "accounts", "owners"

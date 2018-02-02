@@ -2,12 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Account, type: :model do
   describe '#create' do
-  let(:person) { create(:person) }
-  let(:main_account) { create(:main_account, owner: person) }
-  # let(:main_account) { Account.create(balance: 1.5, status: 'active', owner_id: person.id, main: true) }
-  # let(:filial_account) { Account.create(balance: 1.5, status: 'active', main: false, parent_id: main_account.id, owner_id: person.id) }
-  # let(:account) { Account.create(balance: 1.5, status: 'active', main: true, owner_id: person.id) }
-  let(:filial_account) { build(:filial_account, owner: person, parent_id: main_account.id) }
+    let(:person) { create(:person) }
+    let(:main_account) { create(:main_account, owner: person) }
+    let(:filial_account) { build(:filial_account, owner: person, parent_id: main_account.id) }
 
     context 'when tries to create a filial account with no owner' do
       it 'should not be a valid account' do
